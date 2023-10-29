@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://recocina.netlify.app/sitemap-index.xml

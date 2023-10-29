@@ -1,0 +1,16 @@
+/**
+ * tsconfig.json
+ * @see https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+ */
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src", "astro.config.mjs", ".eslintrc.cjs", "**/*.js", "**/*.ts", "**/*.cjs", "**/*.mjs"]
+}
