@@ -3,11 +3,5 @@
     "*.css": "tailwindcss",
     "*.scss": "tailwindcss"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "astro", 
-    "typescript",
-    "typescriptreact"
-  ]
+  "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"]
 }
