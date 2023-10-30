@@ -11,12 +11,13 @@ const { title, description = site.description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang={site.language} transition:animate="none">
+<html lang={site.language}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{site.title} {title && ' | ' + title}</title>
     <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <slot name="head" />
   </head>

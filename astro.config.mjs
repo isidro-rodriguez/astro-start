@@ -1,7 +1,9 @@
 import { defineConfig } from 'astro/config';
 import { site } from './src/constants';
-import webmanifest from 'astro-webmanifest';
+import robotsTxt from 'astro-robots-txt';
 import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import webmanifest from 'astro-webmanifest';
 
 /**
  * Configuración del proyecto en Astro
@@ -11,7 +13,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: site.url,
   integrations: [
+    robotsTxt(),
     sitemap(),
+    tailwind(),
     webmanifest({
       name: site.title,
       description: site.description,
@@ -21,7 +25,7 @@ export default defineConfig({
       theme_color: site.theme_color,
       background_color: site.background_color,
       display: 'standalone',
-      orientation: 'portrait'
+      orientation: 'portrait',
     }),
   ],
 });
