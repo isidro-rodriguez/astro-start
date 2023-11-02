@@ -5,4 +5,5 @@ export const site = {
   language: 'es',
   theme_color: '#ffffff',
   background_color: '#ffffff',
+  mobile_orientation: 'portrait'
 };

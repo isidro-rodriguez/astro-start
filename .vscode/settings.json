@@ -1,7 +1,8 @@
 {
   "files.associations": {
     "*.css": "tailwindcss",
+    "*.sass": "tailwindcss",
     "*.scss": "tailwindcss"
   },
-  "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"]
+  "eslint.validate": ["javascript", "astro", "typescript"]
 }

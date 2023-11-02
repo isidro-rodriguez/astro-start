@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { site } from './src/constants';
+import { site } from './src/consts';
 import robotsTxt from 'astro-robots-txt';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
@@ -18,6 +18,10 @@ export default defineConfig({
     tailwind(),
     webmanifest({
       name: site.title,
+      config: {
+        insertAppleTouchLinks: true,
+        iconPurpose: ['badge', 'maskable'],
+      },
       description: site.description,
       lang: site.language,
       start_url: '/',
