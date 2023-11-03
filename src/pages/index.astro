@@ -1,18 +1,25 @@
 ---
 import Layout from '@/components/Layout.astro';
+import placeholder from '@/assets/images/placeholder.svg';
 import { site } from '@/consts';
+import { Image } from 'astro:assets';
+import Icon from '@/components/icon.astro';
 ---
 
 <Layout>
-  <h1>{site.title}</h1>
-  <p>{site.description}</p>
+  <main class="flex min-h-screen flex-col items-center justify-center">
+    <h1 class="mb-8 mt-16 text-4xl font-bold">
+      <Icon icon="house" />
+      {site.title}
+    </h1>
+    <p class="mb-8 text-lg">
+      {site.description}
+    </p>
+    <Image src={placeholder} alt="placeholder" class="rounded-2xl" />
+  </main>
 </Layout>
 
-<style>
-  h1 {
-    @apply mb-8 mt-16 text-center text-4xl font-bold;
-  }
-  p {
-    @apply text-center text-lg;
-  }
-</style>
+<script>
+  import { main } from '@/assets/scripts/main';
+  main();
+</script>

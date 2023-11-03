@@ -1,3 +1,6 @@
+/**
+ * Constantes del sitio
+ */
 export const site = {
   title: 'Astro starT',
   description: 'Plantilla básica para proyectos de Astro',
@@ -5,5 +8,6 @@ export const site = {
   language: 'es',
   theme_color: '#ffffff',
   background_color: '#ffffff',
-  mobile_orientation: 'portrait'
+  icon: 'public/icon.svg',
+  orientation: 'portrait',
 };

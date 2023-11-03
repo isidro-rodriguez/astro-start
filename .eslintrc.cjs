@@ -1,7 +1,7 @@
 /**
+ * Archivo de configuración de Eslint en formato CJS.
  * @type {import("eslint").Linter.Config}
- * This is the ESLint configuration file in CJS format.
- * It defines the rules and settings for linting JavaScript and TypeScript code.
+ * @see https://eslint.org/docs/latest/user-guide/configuring
  */
 
 module.exports = {
