@@ -1,6 +1,5 @@
 /**
  * Archivo de configuración de Eslint en formato CJS.
- * @type {import("eslint").Linter.Config}
  * @see https://eslint.org/docs/latest/user-guide/configuring
  */
 

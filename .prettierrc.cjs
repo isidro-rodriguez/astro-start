@@ -1,7 +1,5 @@
 /**
  * Archivo de configuración de Prettier en formato CJS.
- * Define las reglas para el formateo de documentos del proyecto.
- * @type {import('prettier').Config}
  * @see https://prettier.io/docs/en/configuration.html
  */
 
