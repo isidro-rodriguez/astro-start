@@ -3,13 +3,11 @@ import Layout from '@/components/Layout.astro';
 import placeholder from '@/assets/images/placeholder.svg';
 import { site } from '@/consts';
 import { Image } from 'astro:assets';
-import Icon from '@/components/icon.astro';
 ---
 
 <Layout>
   <main class="flex min-h-screen flex-col items-center justify-center">
     <h1 class="mb-8 mt-16 text-4xl font-bold">
-      <Icon icon="house" />
       {site.title}
     </h1>
     <p class="mb-8 text-lg">
