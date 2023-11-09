@@ -2,10 +2,34 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "./node_modules/.bin/astro dev",
-      "name": "Development server",
+      "type": "node-terminal",
       "request": "launch",
-      "type": "node-terminal"
+      "name": "Development server",
+      "command": "./node_modules/.bin/astro dev"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Check & Build site",
+      "command": "./node_modules/.bin/astro check; ./node_modules/.bin/astro build"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Preview Built site",
+      "command": "./node_modules/.bin/astro preview"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Format with Prettier",
+      "command": "./node_modules/.bin/prettier -w ."
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Lint with ESLint",
+      "command": "./node_modules/.bin/eslint . --ext .js,.ts,.astro"
     }
   ]
 }
