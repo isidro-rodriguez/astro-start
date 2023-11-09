@@ -3,13 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .container {
-    @apply mx-auto;
-  }
-}
-
-@layer utilities {
-  .svg {
+  [astro-icon] {
     @apply inline h-[1em] w-auto fill-current text-current;
   }
 }
