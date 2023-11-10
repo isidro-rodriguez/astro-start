@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+  /* El icono SVG hereda los estilos del contenedor padre */
   [astro-icon] {
     @apply inline h-[1em] w-auto fill-current text-current;
   }

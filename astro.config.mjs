@@ -30,6 +30,15 @@ export default defineConfig({
       background_color: site.background_color,
       orientation: site.orientation,
       display: 'standalone',
+      screenshots: [
+        {
+          src: site.og_image,
+          sizes: site.og_image_size,
+          type: site.og_image_type,
+          platform: 'wide',
+          label: site.title,
+        },
+      ],
     }),
   ],
 });
