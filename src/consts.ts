@@ -2,7 +2,7 @@
  * Constantes del sitio
  */
 export const site = {
-  title: 'Astro starT',
+  title: 'Astro start',
   description: 'Plantilla básica para proyectos de Astro',
   url: 'https://www.astro-start.com',
   language: 'es',
