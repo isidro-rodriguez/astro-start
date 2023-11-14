@@ -2,7 +2,6 @@
  * Archivo de configuración de Eslint en formato CJS.
  * @see https://eslint.org/docs/latest/user-guide/configuring
  */
-
 module.exports = {
   env: {
     es2022: true,

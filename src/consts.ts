@@ -1,5 +1,5 @@
 /**
- * Constantes del sitio
+ * Constantes del proyecto
  */
 export const site = {
   title: 'Astro start',
