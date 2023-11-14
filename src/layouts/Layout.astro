@@ -1,6 +1,6 @@
 ---
-import '@/assets/styles/main.scss';
-import { site } from '@/consts';
+import "@/assets/styles/main.scss";
+import { site } from "@/consts";
 
 interface Props {
   title?: string;
@@ -15,7 +15,7 @@ const { title, description = site.description } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{site.title} {title && ' | ' + title}</title>
+    <title>{site.title} {title && " | " + title}</title>
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={site.url} />

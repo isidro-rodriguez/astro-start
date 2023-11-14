@@ -5,28 +5,28 @@
 module.exports = {
   printWidth: 100,
   bracketSpacing: true,
-  arrowParens: 'avoid',
+  arrowParens: "avoid",
   bracketSameLine: true,
-  quoteProps: 'as-needed',
-  proseWrap: 'preserve',
-  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  quoteProps: "as-needed",
+  proseWrap: "preserve",
+  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   overrides: [
     {
-      files: ['**/*.astro'],
+      files: ["**/*.astro"],
       options: {
-        parser: 'astro',
+        parser: "astro",
       },
     },
     {
-      files: ['src/**/*.ts'],
+      files: ["src/**/*.ts"],
       options: {
-        parser: 'typescript',
+        parser: "typescript",
       },
     },
     {
-      files: ['src/**/*.js'],
+      files: ["src/**/*.js"],
       options: {
-        parser: 'babel',
+        parser: "babel",
       },
     },
   ],

@@ -1,3 +1,3 @@
 export function main() {
-  console.log('¡Hola, Astro!');
+  console.log("¡Hola, Astro!");
 }

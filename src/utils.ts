@@ -25,8 +25,8 @@ export default class Utils {
    * @example Utils.formatDate(new Date())
    */
   static formatDate(date: Date): string {
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = String(date.getFullYear());
 
     return `${day}/${month}/${year}`;
@@ -41,19 +41,19 @@ export default class Utils {
    */
   static slugify(string: string): string {
     const specialChars =
-      'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìıİłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+      "àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìıİłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;";
     const replaceChars =
-      'aaaaaaaaaacccddeeeeeeeegghiiiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
-    const regex = new RegExp(specialChars.split('').join('|'), 'g');
+      "aaaaaaaaaacccddeeeeeeeegghiiiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------";
+    const regex = new RegExp(specialChars.split("").join("|"), "g");
 
     return string
       .toString()
       .toLowerCase()
-      .replace(/\s+/g, '-')
-      .replace(regex, (c) => replaceChars.charAt(specialChars.indexOf(c)))
-      .replace(/&/g, '-and-')
-      .replace(/[^\w-]+/g, '')
-      .replace(/^-+/, '')
-      .replace(/-+$/, '');
+      .replace(/\s+/g, "-")
+      .replace(regex, c => replaceChars.charAt(specialChars.indexOf(c)))
+      .replace(/&/g, "-and-")
+      .replace(/[^\w-]+/g, "")
+      .replace(/^-+/, "")
+      .replace(/-+$/, "");
   }
 }
