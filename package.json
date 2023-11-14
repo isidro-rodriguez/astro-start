@@ -1,7 +1,10 @@
 {
-  "name": "test",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "astro-start",
+  "version": "1.0.0",
+  "description": "Una plantilla básica para Astro",
+  "license": "MIT",
+  "author": "Isidro Rodríguez <https://github.com/isidro-rodriguez>",
+  "homepage": "https://github.com/isidro-rodriguez/astro-start",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
