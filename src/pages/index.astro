@@ -1,22 +1,17 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import placeholder from "@/assets/images/placeholder.svg";
-import Icon from "astro-icon";
+import horizon from "@/assets/images/horizon.jpg";
 import { Image } from "astro:assets";
 import { site } from "@/consts";
 ---
 
 <Layout>
-  <main class="flex min-h-screen flex-col items-center justify-center">
-    <h1 class="mb-8 mt-16 text-4xl font-bold">
-      <Icon name="ph:house-duotone" class="mb-2 mr-2" />
-      {site.title}
-      <Icon name="ph:house-duotone" class="mb-2 ml-2" />
-    </h1>
+  <main class="flex min-h-screen flex-col items-center justify-center bg-slate-900 text-slate-300">
+    <Image src="/favicon.svg" alt="placeholder" class="rounded-2xl" height={200} width={200} />
     <p class="mb-8 text-lg">
       {site.description}
     </p>
-    <Image src={placeholder} alt="placeholder" class="rounded-2xl" />
+    <Image src={horizon} alt="placeholder" class="rounded-2xl" />
   </main>
 </Layout>
 
