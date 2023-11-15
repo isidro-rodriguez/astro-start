@@ -1,0 +1,36 @@
+---
+import Icon from "astro-icon";
+import { theme } from "@/consts";
+---
+
+<label class="btn btn-circle btn-ghost swap swap-rotate">
+  <input type="checkbox" id="theme-controller" data-theme=`${theme.light},${theme.dark}` />
+
+  <Icon name="ph:sun-dim-fill" class="swap-on h-5 w-5" />
+  <Icon name="ph:moon-stars-fill" class="swap-off h-5 w-5" />
+</label>
+
+<script>
+  const themeController = document.querySelector("#theme-controller") as HTMLInputElement;
+  if (!themeController) throw new Error("No encontrado: #theme-controller");
+  const dataTheme = themeController.getAttribute("data-theme");
+  if (!dataTheme) throw new Error("No encontrado: data-theme");
+  const [light_theme, dark_theme] = dataTheme.split(",");
+
+  // Sincroniza el checkbox con el tema guardado en localStorage o el predeterminado del explorador
+  localStorage.getItem("theme") === light_theme ||
+  window.matchMedia("(prefers-color-scheme: light)").matches
+    ? (themeController.checked = true)
+    : (themeController.checked = false);
+
+  // Al hacer click en el checkbox cambia el tema y lo guarda en localStorage
+  themeController.addEventListener("change", () => {
+    if (themeController.checked) {
+      document.documentElement.setAttribute("data-theme", light_theme);
+      localStorage.setItem("theme", light_theme);
+    } else {
+      document.documentElement.setAttribute("data-theme", dark_theme);
+      localStorage.setItem("theme", dark_theme);
+    }
+  });
+</script>

@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon";
+import { site, pages } from "@/consts";
+import ThemeController from "./themeController.astro";
+---
+
+<header class="bg-base-100">
+  <nav class="container navbar">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden" role="button">
+          <Icon name="ph:text-align-justify" class="h-5 w-5" />
+        </label>
+        <ul
+          role="menu"
+          tabindex="0"
+          class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+          {
+            pages.map(page => (
+              <li>
+                <a href={page.url} class="text-base">
+                  <Icon name={page.icon} /> {page.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <a href="/" class="btn btn-ghost hidden text-xl lg:inline-flex">{site.title}</a>
+    </div>
+
+    <div class="navbar-center">
+      <a href="/" class="btn btn-ghost text-xl lg:hidden">{site.title}</a>
+      <ul class="menu menu-horizontal hidden px-1 lg:flex" role="menu">
+        {
+          pages.map(page => (
+            <li>
+              <a href={page.url} class="text-base">
+                <Icon name={page.icon} /> {page.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="navbar-end">
+      <ThemeController />
+    </div>
+  </nav>
+</header>

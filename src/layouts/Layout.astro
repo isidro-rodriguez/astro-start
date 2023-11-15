@@ -1,5 +1,6 @@
 ---
 import "@/assets/styles/main.scss";
+import Navbar from "@/components/navbar.astro";
 import { site } from "@/consts";
 
 interface Props {
@@ -13,6 +14,12 @@ const { title, description = site.description } = Astro.props;
 <!doctype html>
 <html lang={site.language}>
   <head>
+    <script is:inline>
+      // Establece el tema guardado en localStorage o el predeterminado del explorador
+      localStorage.getItem("theme")
+        ? document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
+        : window.matchMedia("(prefers-color-scheme: light)").matches;
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{site.title} {title && " | " + title}</title>
@@ -43,6 +50,7 @@ const { title, description = site.description } = Astro.props;
   </head>
 
   <body>
+    <Navbar />
     <slot />
 
     <slot name="script" />

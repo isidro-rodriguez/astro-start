@@ -2,7 +2,7 @@
 
 Una plantilla básica de [Astro](https://astro.build/) para empezar tu sitio web con una configuración establecida.
 
-Para instalarla:
+Para instalarlo:
 
 ```shell
 git clone https://github.com/isidro-rodriguez/astro-start
@@ -13,7 +13,8 @@ npm install
 ## Características
 
 - [Tailwind CSS](https://tailwindcss.com/) para las hojas de estilo.
-- [Sass](https://sass-lang.com/) para aprovechar sus características.
+- [DaisyUI](https://daisyui.com/): para la interfaz y el cambio de temas.
+- [Sass](https://sass-lang.com/) para aprovechar sus características de preprocesado.
 - [Astro icons](https://www.astroicon.dev/) para importar SVGs de [Iconify](https://iconify.design/).
 - [Astro sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/) para generar `sitemap.xml`.
 - [Astro webmanifest](https://github.com/alextim/astro-lib/tree/main/packages/astro-webmanifest#readme) para generar `manifest.webmanifest`, iconos a partir de `public/favicon.svg` y sus relaciones en cabecera.
@@ -35,7 +36,7 @@ src
 ├───components    Componentes
 ├───layouts       Plantillas
 ├───pages         Páginas
-├───consts.ts     Constantes de proyecos
+├───consts.ts     Constantes de proyecto
 ├───env.d.ts      Declaración de tipos
 └───utils.ts      Utilidades para compilado
 ```
