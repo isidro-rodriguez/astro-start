@@ -8,7 +8,8 @@ interface Props {
   description?: string;
 }
 
-const { title, description = site.description } = Astro.props;
+let { title = site.title, description = site.description } = Astro.props;
+if (title !== site.title) title = `${site.title} | ${title}`;
 ---
 
 <!doctype html>
@@ -22,7 +23,8 @@ const { title, description = site.description } = Astro.props;
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{site.title} {title && " | " + title}</title>
+    <title>{title}</title>
+
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={site.url} />
@@ -36,7 +38,7 @@ const { title, description = site.description } = Astro.props;
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={site.language} />
     <meta property="og:site_name" content={site.title} />
-    <meta property="og:image" content=`/${site.og_image}` />
+    <meta property="og:image" content="/ogimage.jpg" />
     <meta property="og:image:alt" content={site.title} />
     <!-- /OpenGraph -->
 
@@ -44,7 +46,7 @@ const { title, description = site.description } = Astro.props;
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={site.title} />
     <meta name="twitter:description" content={site.description} />
-    <meta name="twitter:image" content=`/${site.og_image}` />
+    <meta name="twitter:image" content="/ogimage.jpg" />
     <meta name="twitter:url" content={site.url} />
     <!-- /Twitter -->
   </head>

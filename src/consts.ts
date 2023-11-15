@@ -8,16 +8,10 @@ export const site = {
   description: "Plantilla básica para proyectos de Astro con Tailwind CSS y daisyUI",
   url: "https://www.astro-start.com",
   language: "es",
-  icon: "public/favicon.svg",
-  orientation: "landscape",
-  og_image: "ogimage.jpg",
-  og_image_type: "image/jpeg",
-  og_image_size: "1200x630",
 };
 
 /**
- * Tema claro y oscuro
- * Establece 'primary_color' y 'background_color' en base al tema claro.
+ * Temas claro y oscuro (establece los colores en base al tema principal)
  * @see https://daisyui.com/docs/themes/
  */
 export const theme = {
