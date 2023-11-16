@@ -14,12 +14,13 @@ import ThemeController from "./themeController.astro";
         <ul
           role="menu"
           tabindex="0"
-          class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+          class="dropdown-content menu menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
           {
             pages.map(page => (
               <li>
                 <a href={page.url} class="text-base">
-                  <Icon name={page.icon} /> {page.title}
+                  {page.icon && <Icon name={page.icon} />}
+                  {page.title}
                 </a>
               </li>
             ))
@@ -36,7 +37,8 @@ import ThemeController from "./themeController.astro";
           pages.map(page => (
             <li>
               <a href={page.url} class="text-base">
-                <Icon name={page.icon} /> {page.title}
+                {page.icon && <Icon name={page.icon} />}
+                {page.title}
               </a>
             </li>
           ))

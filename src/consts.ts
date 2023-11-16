@@ -26,6 +26,6 @@ export const theme = {
  */
 export const pages: page[] = [
   { title: "Inicio", url: "/", icon: "ph:house-fill" },
-  { title: "Sobre", url: "/about", icon: "ph:info-bold" },
-  { title: "Contacto", url: "/contact", icon: "ph:envelope-fill" },
+  { title: "Sobre", url: "/sobre", icon: "ph:info-bold" },
+  { title: "Contacto", url: "/contacto", icon: "ph:envelope-fill" },
 ];
