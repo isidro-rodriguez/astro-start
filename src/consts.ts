@@ -1,5 +1,3 @@
-import type { page } from "./env.d";
-
 /**
  * Constantes del proyecto
  */
