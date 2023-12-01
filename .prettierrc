@@ -1,0 +1,29 @@
+{
+  "printWidth": 100,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "bracketSameLine": true,
+  "quoteProps": "as-needed",
+  "proseWrap": "always",
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": ["**/*.astro"],
+      "options": {
+        "parser": "astro"
+      }
+    },
+    {
+      "files": ["src/**/*.ts"],
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": ["src/**/*.js"],
+      "options": {
+        "parser": "babel"
+      }
+    }
+  ]
+}

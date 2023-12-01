@@ -1,7 +1,7 @@
 /// <reference types="astro/client" />
 
-export interface page {
+export type page = {
   title: string;
   url: string;
   icon?: string;
-}
+};
